@@ -18,9 +18,16 @@ from django.urls import path
 from geoapp import views
 
 urlpatterns = [
+    # Admin site
     path('admin/', admin.site.urls),
-    path('', views.continent_form, name="continent_form"),
-    path('results/', views.search_results, name="search_results"),
-    path('history/', views.history, name="history"),
+
+    # Show continent select form
+    path('', views.continent_form, name='continent_form'),
+
+    # Show 5 random countries and weather
+    path('results/', views.search_results, name='search_results'),
+
+    # Show MongoDB history
+    path('history/', views.history, name='history'),
 ]
 
