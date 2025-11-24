@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>History</title>
+</head>
+<body>
+
+<h1>History</h1>
+
+{% if records %}
+    <ul>
+        {% for item in records %}
+            <li>
+                <strong>{{ item.country }}</strong><br>
+                Capital: {{ item.capital }}<br>
+                Temperature: {{ item.temp }} °C<br>
+                Description: {{ item.description }}
+            </li>
+            <br>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No history found.</p>
+{% endif %}
+
+<br>
+<a href="/">Back to Search</a>
+
+</body>
+</html>
+

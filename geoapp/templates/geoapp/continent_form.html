@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Select Continent</title>
+</head>
+<body>
+
+<h1>Select a Continent</h1>
+
+<form action="/results/" method="POST">
+    {% csrf_token %}
+    
+    <select name="continent" required>
+        <option value="Europe">Europe</option>
+        <option value="Asia">Asia</option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">Americas</option>
+        <option value="Oceania">Oceania</option>
+    </select>
+
+    <button type="submit">Search</button>
+</form>
+
+</body>
+</html>
+
